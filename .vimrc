@@ -18,6 +18,27 @@ set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 set nohlsearch
+set wrap
+set textwidth=79
+set formatoptions=qrn1
+set colorcolumn=85
+set modelines=0
+set encoding=utf-8
+set scrolloff=3
+set showmode
+set showcmd
+set hidden
+set wildmenu
+set wildmode=list:longest
+set visualbell
+set ttyfast
+set ruler
+set showmatch
+set gdefault
+set smartcase
+set ignorecase
+set laststatus=2
+set undofile
 
 call vundle#begin()
 
@@ -27,12 +48,14 @@ Plugin 'scrooloose/syntastic'
 Plugin 'Rip-Rip/clang_complete'
 Plugin 'oblitum/rainbow'
 Plugin 'altercation/vim-colors-solarized'
+Plugin 'google/vim-colorscheme-primary'
+Plugin 'morhetz/gruvbox'
 "Plugin 'SirVer/ultisnips'
 "Plugin 'honza/vim-snippets'
 
 call vundle#end()
 
-filetype on
+filetype off
 filetype plugin indent on 
 
 map <up> <nop>
@@ -59,6 +82,8 @@ let g:rainbow_guifgs = ['RoyalBlue3', 'DarkOrange3', 'DarkOrchid3',
 let g:rainbow_ctermfgs = ['darkcyan', 'darkmagenta', 'darkgreen', 'gray',
                         \'brown']
 
+"colorscheme solarized
 syntax enable
+set t_Co=256
 set background=dark
-colorscheme solarized
+colorscheme gruvbox
