@@ -86,4 +86,11 @@ let g:rainbow_ctermfgs = ['darkcyan', 'darkmagenta', 'darkgreen', 'gray',
 syntax enable
 set t_Co=256
 set background=dark
-colorscheme gruvbox
+
+let hour = strftime("%H")
+
+if hour <= 8
+	colorscheme primary
+else
+	colorscheme gruvbox
+endif
